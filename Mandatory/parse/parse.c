@@ -1,0 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/16 17:19:34 by omghazi           #+#    #+#             */
+/*   Updated: 2024/03/17 10:10:37 by omghazi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../include/push_swap.h"
+
+void    fill_stack(t_stack **stack, char **av)
+{
+    t_stack *node;
+    char    **tmp;
+    int     i;
+    int     j;
+
+    i = 0;
+    while (av[i])
+    {
+        j = 0;
+        tmp = ft_split(av[i], ' ');
+        while (tmp[j])
+        {
+            is_valid(tmp[j]);
+            node = ft_lstnew(ft_atoi(tmp[j]));
+            if (!node)
+                return ;
+            ft_lstadd_back(stack, node);
+            is_duplicate(stack);
+            free(tmp[j]);
+            j++;
+        }
+        free(tmp);
+        i++;
+    }
+}
