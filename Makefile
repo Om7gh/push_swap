@@ -1,11 +1,16 @@
 SRC=$(addprefix Mandatory/, libft/ft_atoi.c\
 							libft/ft_lstnew.c\
 							libft/ft_lstadd_back.c\
+							libft/ft_lstadd_front.c\
 							libft/ft_lstclean.c\
 							libft/ft_split.c\
 							utils/utils1.c\
 							utils/utils2.c\
 							parse/parse.c\
+							actions/push.c\
+							actions/swap.c\
+							actions/rotate.c\
+							actions/reverse_rotate.c\
 							main.c\
 							)
 OBJ=$(SRC:.c=.o)
