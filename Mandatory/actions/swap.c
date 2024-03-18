@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:50 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/17 10:27:04 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/17 23:26:19 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void swap(t_stack **stack, char *str)
     if (!stack || !*stack)
         return ;
     head = *stack;
-    ft_swap(head->value, head->next->value);
+    ft_swap(&(head->value), &(head->next->value));
     ft_putendl(str);
 }

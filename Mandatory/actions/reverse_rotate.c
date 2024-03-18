@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:43 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/17 11:29:27 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/17 23:35:19 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 
 void reverse_rotate(t_stack **stack, char *str)
 {
-    t_stack *head;
+    t_stack *last;
+    t_stack *current;
     t_stack *prev;
     
     if (!stack || !*stack)
         return ;
-    head = *stack;
-    while (head)
+    current = *stack;
+    prev = NULL;
+    last = NULL;
+    while (current->next)
     {
-        prev = head;   
-        head = head->next;
+        prev = current;   
+        current = current->next;
     }
-    if (prev)
-        prev->next = NULL;
-    ft_lstadd_front(stack, head);
+    last = current;
+    ft_lstadd_front(stack, last);
+    prev->next = NULL;
     ft_putendl(str);
 }

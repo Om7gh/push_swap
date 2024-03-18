@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/17 11:29:59 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/17 23:23:27 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int         ft_atoi(char *s);
 void        fill_stack(t_stack **stack, char **av);
 
 /*------------Sort----------*/
-
+void        sort_three(t_stack **stack);
 
 /*------------Actions----------*/
 void        swap(t_stack **stack, char *str);
