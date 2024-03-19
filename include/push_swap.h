@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 02:52:59 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 03:28:54 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,11 @@ void        fill_stack(t_stack **stack, char **av);
 
 /*------------Sort----------*/
 void        sort_three(t_stack **stack);
+void        index_stack(t_stack **stack);
+void        find_target(t_stack **stack_a, t_stack **stack_b);
 
 /*------------Actions----------*/
 void        swap(t_stack **stack, char *str);
-void        push_a(t_stack **stack_a, t_stack **stack_b, char *str);
-void        push_b(t_stack **stack_a, t_stack **stack_b, char *str);
+void        push(t_stack **stack_a, t_stack **stack_b, char *str);
 void        reverse_rotate(t_stack **stack, char *str);
 void        rotate(t_stack **stack, char *str);

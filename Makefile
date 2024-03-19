@@ -12,6 +12,7 @@ SRC=$(addprefix Mandatory/, libft/ft_atoi.c\
 							actions/rotate.c\
 							actions/reverse_rotate.c\
 							sort/sort_three.c\
+							sort/sort_utils.c\
 							main.c\
 							)
 OBJ=$(SRC:.c=.o)

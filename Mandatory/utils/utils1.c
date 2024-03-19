@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:21:13 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/17 10:23:26 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 03:47:54 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void print_stack(t_stack **stack)
     head = *stack;
     while (head)
     {
-        printf("%d\n", head->value);
+        printf("value : %d-->", head->value);
+        printf("index : %d\n", head->index);
         head = head->next;
     }
 }
