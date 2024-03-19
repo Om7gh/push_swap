@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 11:37:26 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/17 23:37:18 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/18 22:00:10 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void sort_three(t_stack **stack)
         else if (head->value < next->next->value)
             swap(stack, "sa");
     }
-    else
+    else if (head->value < next->value)
     {
-        if (next->value > next->next->value)
+        if (head->value < next->value && next->value > next->next->value)
             reverse_rotate(stack, "rra");
         else
             return ;

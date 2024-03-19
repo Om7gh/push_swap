@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:41:54 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/16 21:19:02 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 02:58:42 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char **ft_split(char *s, char c)
         while (s[i] && s[i] != c)
             i++;
     }
-    if (new[0] == NULL)
+    if (new[0] == NULL || *new[0] == '\0')
         error();
     return (new[j] = NULL, new);
 }

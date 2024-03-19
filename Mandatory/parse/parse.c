@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:19:34 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/17 10:10:37 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 02:56:54 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void    fill_stack(t_stack **stack, char **av)
     i = 0;
     while (av[i])
     {
-        j = 0;
         tmp = ft_split(av[i], ' ');
+        j = 0;
         while (tmp[j])
         {
             is_valid(tmp[j]);

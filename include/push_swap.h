@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/17 23:23:27 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 02:52:59 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@
 typedef struct s_stack
 {
     int value;
-    int target;
     int index;
+    int qty;
+    int min;
+    int max;
+    struct s_stack *target;
     struct s_stack *next;
     struct s_stack *prev;
 }   t_stack;
