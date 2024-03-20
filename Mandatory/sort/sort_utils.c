@@ -6,12 +6,27 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 03:00:07 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 03:37:42 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 18:15:33 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
+int is_sorted(t_stack **stack)
+{
+    t_stack *head;
+    t_stack *tmp;
+
+    head = *stack;
+    tmp = head->next;
+    while (head)
+    {
+        if (head->value > tmp->value)
+            return (0);
+        head = head->next;
+    }
+    return (1);
+}
 
 void index_stack(t_stack **stack)
 {

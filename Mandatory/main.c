@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:39:52 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 03:48:32 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:33:55 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,27 @@ int main(int ac, char **av)
     stack_a = NULL;
     stack_b = NULL;
     fill_stack(&stack_a, av + 1);
-    push(&stack_b, &stack_a, "pb");
-    push(&stack_b, &stack_a, "pb");
-    push(&stack_b, &stack_a, "pb");
-    // sort_three(&stack_a);
-    // index_stack(&stack_a);
-    // index_stack(&stack_b);
+    index_stack(&stack_a);
+    push_in_stack_b(&stack_a, &stack_b);
+    // if (!is_sorted(&stack_a))
+    // {
+    //     if (stack_a->qty == 2)
+    //         swap(&stack_a, "sa");
+    //     else if (stack_a->qty == 3)
+    //         sort_three(&stack_a);
+    // }
     find_target(&stack_a, &stack_b);
-    printf("stack_a\n");
+    calcule_cost(&stack_b);
+    printf("stack a\n");
     print_stack(&stack_a);
-    printf("stack_b\n");
-    while (stack_b)
+    printf("stack b\n");
+     while (stack_b)
     {
         printf("value : %d-->", stack_b->value);
-        printf("target : %d-->", stack_b->target->value);
+        printf("cost : %d-->", stack_b->cost);
+        printf("target : %d-->", stack_b->target->index);
         printf("index : %d\n", stack_b->index);
-         stack_b = stack_b->next;
+        stack_b = stack_b->next;
     }
     ft_lstclean(&stack_a);
 }

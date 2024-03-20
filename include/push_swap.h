@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 03:28:54 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 22:26:51 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ typedef struct s_stack
     int qty;
     int min;
     int max;
+    int cost;
     struct s_stack *target;
     struct s_stack *next;
-    struct s_stack *prev;
 }   t_stack;
 
 /*------------Utils----------*/
@@ -55,6 +55,11 @@ void        fill_stack(t_stack **stack, char **av);
 void        sort_three(t_stack **stack);
 void        index_stack(t_stack **stack);
 void        find_target(t_stack **stack_a, t_stack **stack_b);
+int         is_sorted(t_stack **stack);
+void        find_min(t_stack **stack);
+void        find_max(t_stack **stack);
+void        push_in_stack_b(t_stack **stack_a, t_stack **stack_b);
+void        calcule_cost(t_stack **stack_b);
 
 /*------------Actions----------*/
 void        swap(t_stack **stack, char *str);

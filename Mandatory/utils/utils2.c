@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:27:58 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 03:46:55 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/19 18:18:38 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,6 @@ void    is_duplicate(t_stack **stack)
         {
             if (head->value == prev->value)
                 error();
-            if (prev->value > head->value)
-                head->max = prev->value;
-            if (prev->value < head->value)
-                head->min = prev->value;
             prev = prev->next;
         }
         head = head->next;
