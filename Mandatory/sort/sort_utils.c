@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 03:00:07 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 18:15:33 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 04:58:49 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ void index_stack(t_stack **stack)
     if (!stack || !*stack)
         return ;
     head = *stack;
-    head->index = 0;
     i = -1;
     while (head)
     {
         i++;
-        head->index += i;
+        head->index = i;
         head = head->next;
     }
 }
@@ -69,7 +68,7 @@ static t_stack *target(t_stack *head_b, t_stack **stack_a)
 void    find_target(t_stack **stack_a, t_stack **stack_b)
 {
     t_stack *head;
-    
+
     if (!stack_b || !*stack_b || !stack_a)
         return ;
     head = *stack_b;

@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:21:13 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 18:26:28 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 03:24:19 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,36 @@ long is_overflow(long n)
     return (0);
 }
 
-void print_stack(t_stack **stack)
+void print_stack_a(t_stack **stack)
+{
+    t_stack *head;
+
+    printf("\n");
+    head = *stack;
+    printf("\033[0;32mstack A :\n");
+    while (head)
+    {
+        printf("\033[0;32mvalue : %3d | ", head->value);
+        printf("\033[0;32mindex : %3d\n", head->index);
+        head = head->next;
+    }
+    printf("\n");
+}
+
+void print_stack_b(t_stack **stack)
 {
     t_stack *head;
 
     head = *stack;
-    while (head)
+     printf("\033[0;34mstack B :\n");
+     while (head)
     {
-        printf("value : %d-->", head->value);
-        printf("index : %d\n", head->index);
+        printf("\033[0;34mvalue  : %3d | ", head->value);
+        printf("\033[0;34mtarget : %3d | ", head->target->value);
+        printf("\033[0;34mindex  : %3d\n", head->index);
         head = head->next;
     }
+    printf("\n");
 }
 
 void free_2d(char **new, int i)

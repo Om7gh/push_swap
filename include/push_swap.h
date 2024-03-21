@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 22:26:51 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 04:15:05 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ typedef struct s_stack
 void        error();
 long        is_overflow(long n);
 void        ft_putendl(char *s);
-void        print_stack(t_stack **stack);
+void        print_stack_a(t_stack **stack);
+void        print_stack_b(t_stack **stack);
 void        free_2d(char **new, int i);
 void        is_duplicate(t_stack **stack);
 void        is_valid(char *av);
