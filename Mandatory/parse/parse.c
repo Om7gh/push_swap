@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:19:34 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 02:17:20 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 06:20:36 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,24 +44,26 @@ void    fill_stack(t_stack **stack, char **av)
 void find_max(t_stack **stack)
 {
     t_stack *head;
+    t_stack *max_node;
     int max;
-    int min;
 
     if (!stack || !*stack)
         return ;
     head = *stack;
-    max = head->value;
-    min = head->value;
+    max = INT_MIN;
     while (head)
     {
         if (head->value > max)
-            max = head->value;
+        {
+            max = head->value;   
+            max_node = head;
+        }
         head = head->next;
     }
     head = *stack;
     while (head)
     {
-        head->max = max;
+        head->max = max_node;
         head = head->next;
     }
 }
@@ -69,24 +71,26 @@ void find_max(t_stack **stack)
 void find_min(t_stack **stack)
 {
     t_stack *head;
-    int max;
+    t_stack *min_node;
     int min;
 
     if (!stack || !*stack)
         return ;
     head = *stack;
-    max = head->value;
-    min = head->value;
+    min = INT_MAX;
     while (head)
     {
         if (head->value < min)
-            min = head->value;
+        {
+            min = head->value;   
+            min_node = head;
+        }
         head = head->next;
     }
     head = *stack;
     while (head)
     {
-        head->min = min;
+        head->min = min_node;
         head = head->next;
     }
 }

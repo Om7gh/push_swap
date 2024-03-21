@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 03:00:07 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 04:58:49 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 06:16:59 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,9 @@ static t_stack *target(t_stack *head_b, t_stack **stack_a)
         }
         head_a = head_a->next;
     }
+    printf("%d\t", (*stack_a)->min->value);
+    if (smallest_big == INT_MAX)
+        stack_node = (*stack_a)->min;
     return (stack_node);
 }
 
@@ -74,7 +77,8 @@ void    find_target(t_stack **stack_a, t_stack **stack_b)
     head = *stack_b;
     while (head)
     {
-        head->target = target(head, stack_a);
+        if (target(head, stack_a))
+            head->target = target(head, stack_a);
         head = head->next;
     }
 }
