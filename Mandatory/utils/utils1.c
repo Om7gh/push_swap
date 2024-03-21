@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:21:13 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 03:24:19 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 06:27:41 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void print_stack_b(t_stack **stack)
     {
         printf("\033[0;34mvalue  : %3d | ", head->value);
         printf("\033[0;34mtarget : %3d | ", head->target->value);
+        printf("\033[0;34mcost  : %3d | ", head->cost);
         printf("\033[0;34mindex  : %3d\n", head->index);
         head = head->next;
     }

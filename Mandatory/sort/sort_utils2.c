@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 21:46:03 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 22:32:47 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 21:11:26 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,24 @@ void push_in_stack_b(t_stack **stack_a, t_stack **stack_b)
     }
 }
 
-void calcule_cost(t_stack **stack_b)
+void calcule_cost(t_stack **stack_a, t_stack **stack_b)
 {
-    t_stack *head;
+    t_stack *head_b;
+    int cost;
 
-    if (!stack_b || !*stack_b)
-        return ;
-    head = *stack_b;
-    while (head)
+    if (!stack_a || !*stack_a || !stack_b || !*stack_b)
+        return;
+
+    head_b = *stack_b;
+    while (head_b)
     {
-        head->cost = head->index + head->target->index + 1;
-        head = head->next;
+        if (!head_b->target) {
+            head_b = head_b->next;
+            continue;
+        }
+        cost = abs(head_b->index - head_b->target->index);
+        cost += 1;
+        head_b->cost = cost;
+        head_b = head_b->next;
     }
 }

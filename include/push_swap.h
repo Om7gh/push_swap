@@ -6,13 +6,14 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 05:55:09 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 21:11:57 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <stdio.h>
+#include <math.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -60,7 +61,7 @@ int         is_sorted(t_stack **stack);
 void        find_min(t_stack **stack);
 void        find_max(t_stack **stack);
 void        push_in_stack_b(t_stack **stack_a, t_stack **stack_b);
-void        calcule_cost(t_stack **stack_b);
+void        calcule_cost(t_stack **stack_a, t_stack **stack_b);
 
 /*------------Actions----------*/
 void        swap(t_stack **stack, char *str);
