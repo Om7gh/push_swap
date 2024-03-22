@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:19:34 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 20:33:47 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 21:22:19 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void    fill_stack(t_stack **stack, char **av)
             if (!node)
                 return ;
             ft_lstadd_back(stack, node);
-            (*stack)->qty++;
             is_duplicate(stack);
             free(tmp[j]);
             j++;

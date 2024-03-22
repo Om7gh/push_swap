@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:39:52 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 20:41:24 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/21 23:17:02 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ int main(int ac, char **av)
     /*---------INIT STACK AND PUSH_B ----------*/
 
     fill_stack(&stack_a, av + 1);
-    tmp = stack_a;
     push_in_stack_b(&stack_a, &stack_b);
-    
+    tmp = stack_a;
+
     /*---------INDEX STACK ----------*/
 
     index_stack(&stack_a);
     index_stack(&stack_b);
-    
+
     /*---------CALL MIN MAX ----------*/
 
     find_min(&stack_a);
@@ -45,13 +45,12 @@ int main(int ac, char **av)
     /*---------FIND TARGET ----------*/
 
     find_target(&stack_a, &stack_b);
-    
+
     /*---------FIND COST ----------*/
 
-    calcule_cost(&tmp, &stack_b);
+    calcule_cost(&stack_a, &stack_b);
 
     /*---------PRINT STACK ----------*/
-
     print_stack_a(&stack_a);
     print_stack_b(&stack_b);
     ft_lstclean(&stack_a);
