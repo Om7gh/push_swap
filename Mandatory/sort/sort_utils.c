@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 03:00:07 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 06:22:29 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/23 23:01:52 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,22 @@ int is_sorted(t_stack **stack)
     return (1);
 }
 
-void index_stack(t_stack **stack)
-{
-    t_stack *head;
-    int     i;
+// void index_stack(t_stack **stack)
+// {
+//     t_stack *head;
+//     int     i;
     
-    if (!stack || !*stack)
-        return ;
-    head = *stack;
-    i = -1;
-    while (head)
-    {
-        i++;
-        head->index = i;
-        head = head->next;
-    }
-}
+//     if (!stack || !*stack)
+//         return ;
+//     head = *stack;
+//     i = -1;
+//     while (head)
+//     {
+//         ++i;
+//         head->index = i;
+//         head = head->next;
+//     }
+// }
 
 static t_stack *target(t_stack *head_b, t_stack **stack_a)
 {

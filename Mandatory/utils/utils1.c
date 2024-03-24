@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:21:13 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 21:51:49 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/24 00:25:08 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void print_stack_a(t_stack **stack)
     while (head)
     {
         printf("\033[0;32mvalue : %3d | ", head->value);
-        printf("\033[0;32mindex : %3d\n", head->index);
+        printf("\033[0;32mcost  : %3d\n", head->cost);
         head = head->next;
     }
     printf("\n");
@@ -44,15 +44,15 @@ void print_stack_a(t_stack **stack)
 void print_stack_b(t_stack **stack)
 {
     t_stack *head;
-
+    
     head = *stack;
-     printf("\033[0;34mstack B :\n");
-     while (head)
+    printf("\033[0;34mstack B :\n");
+    while (head)
     {
         printf("\033[0;34mvalue  : %3d | ", head->value);
         printf("\033[0;34mtarget : %3d | ", head->target->value);
-        printf("\033[0;34mcost  : %3d | ", head->cost);
-        printf("\033[0;34mindex  : %3d\n", head->index);
+        printf("\033[0;34mcost   : %3d | ", head->cost);
+        printf("\033[0;34mtotal cost   : %3d\n", head->total_cost);
         head = head->next;
     }
     printf("\n");

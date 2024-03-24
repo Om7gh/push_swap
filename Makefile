@@ -19,7 +19,7 @@ SRC=$(addprefix Mandatory/, libft/ft_atoi.c\
 							)
 OBJ=$(SRC:.c=.o)
 NAME=push_swap
-HEADER=Mandatory/include/push_swap.h
+HEADER=include/push_swap.h
 CC=cc
 CFLAG=-Wall -Wextra -Werror -g
 Mandatory/%.o:Mandatory/%.c $(HEADER)
@@ -28,7 +28,7 @@ all:$(NAME)
 $(NAME):$(OBJ)
 		$(CC) $(CFLAG) $(OBJ) -o $(NAME)
 clean:
-		rm $(OBJ)
+		rm -f $(OBJ)
 fclean:clean
-		rm $(NAME)
+		rm -f $(NAME)
 re:fclean all

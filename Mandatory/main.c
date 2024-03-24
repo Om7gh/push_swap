@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:39:52 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/21 23:17:02 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/24 00:24:16 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 int main(int ac, char **av)
 {
-    int i = 0;
     t_stack *stack_a;
     t_stack *stack_b;
-    t_stack *tmp;
 
     if (ac == 1)
         return (1); 
@@ -28,19 +26,13 @@ int main(int ac, char **av)
 
     fill_stack(&stack_a, av + 1);
     push_in_stack_b(&stack_a, &stack_b);
-    tmp = stack_a;
-
-    /*---------INDEX STACK ----------*/
-
-    index_stack(&stack_a);
-    index_stack(&stack_b);
 
     /*---------CALL MIN MAX ----------*/
 
     find_min(&stack_a);
-    find_max(&stack_a);
-    sort_three(&stack_a);
-    index_stack(&stack_a);
+    find_max(&stack_b);
+    if (ft_lstsize(&stack_a) == 3)
+        sort_three(&stack_a);
 
     /*---------FIND TARGET ----------*/
 
@@ -48,9 +40,12 @@ int main(int ac, char **av)
 
     /*---------FIND COST ----------*/
 
-    calcule_cost(&stack_a, &stack_b);
+    cost_check(&stack_a);
+    cost_check(&stack_b);
+    total_cost(&stack_b);
 
     /*---------PRINT STACK ----------*/
+
     print_stack_a(&stack_a);
     print_stack_b(&stack_b);
     ft_lstclean(&stack_a);

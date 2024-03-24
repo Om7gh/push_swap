@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 21:46:03 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/22 17:45:22 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/24 00:43:46 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,26 +32,43 @@ void push_in_stack_b(t_stack **stack_a, t_stack **stack_b)
     }
 }
 
-void calcule_cost(t_stack **stack_a, t_stack **stack_b)
+void cost_check(t_stack **stack)
+{
+    t_stack *head;
+    int     i;
+    int     size;
+
+    if (!stack || !*stack)
+        return ;
+    head = *stack;
+    i = 0;
+    size = ft_lstsize(stack);
+    while (head)
+    {
+        if (i <= size / 2)
+            head->cost = i;
+        else
+            head->cost = size - i;
+        i++;
+        head = head->next;
+    }
+}
+
+void total_cost(t_stack **stack_b)
 {
     t_stack *head_b;
-    int cost;
-    int size_b;
-    int size_a;
 
-    if (!stack_a || !*stack_a || !stack_b || !*stack_b)
-        return;
+    if (!stack_b || !*stack_b)
+        return ;
     head_b = *stack_b;
-    cost = 0;
-    size_b = ft_lstsize(stack_b);
-    size_a = ft_lstsize(stack_a);
     while (head_b)
     {
-        if (head_b->index < (size_b / 2))
-            cost = head_b->index + head_b->target->index;
-        else if (head_b->index >= (size_b / 2))
-            cost = size_b - head_b->index + head_b->target->index;
-        head_b->cost = cost;
+        head_b->total_cost = head_b->target->cost + head_b->cost;
         head_b = head_b->next;
     }
+}
+
+int min_cost(t_stack **stack)
+{
+    
 }

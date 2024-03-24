@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:47 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/18 03:11:17 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/24 00:16:46 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void rotate(t_stack **stack, char *str)
 {
     t_stack *head;
-    t_stack *prev;
     t_stack *last;
     
     if (!stack || !*stack)
