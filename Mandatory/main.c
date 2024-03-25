@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:39:52 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/24 00:24:16 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/24 21:22:45 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,16 @@ int main(int ac, char **av)
 
     /*---------CALL MIN MAX ----------*/
 
-    find_min(&stack_a);
-    find_max(&stack_b);
     if (ft_lstsize(&stack_a) == 3)
         sort_three(&stack_a);
 
     /*---------FIND TARGET ----------*/
 
-    find_target(&stack_a, &stack_b);
 
     /*---------FIND COST ----------*/
 
-    cost_check(&stack_a);
-    cost_check(&stack_b);
-    total_cost(&stack_b);
-
     /*---------PRINT STACK ----------*/
-
+    sort_stack(&stack_a, &stack_b);
     print_stack_a(&stack_a);
     print_stack_b(&stack_b);
     ft_lstclean(&stack_a);

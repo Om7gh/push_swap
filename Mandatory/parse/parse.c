@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:19:34 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/23 22:33:08 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/25 00:14:54 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,33 +37,6 @@ void    fill_stack(t_stack **stack, char **av)
         }
         free(tmp);
         i++;
-    }
-}
-
-void find_max(t_stack **stack)
-{
-    t_stack *head;
-    t_stack *max_node;
-    int max;
-
-    if (!stack || !*stack)
-        return ;
-    head = *stack;
-    max = INT_MIN;
-    while (head)
-    {
-        if (head->value > max)
-        {
-            max = head->value;   
-            max_node = head;
-        }
-        head = head->next;
-    }
-    head = *stack;
-    while (head)
-    {
-        head->max = max_node;
-        head = head->next;
     }
 }
 

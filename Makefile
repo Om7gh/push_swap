@@ -15,6 +15,7 @@ SRC=$(addprefix Mandatory/, libft/ft_atoi.c\
 							sort/sort_three.c\
 							sort/sort_utils.c\
 							sort/sort_utils2.c\
+							sort/sort_stack.c\
 							main.c\
 							)
 OBJ=$(SRC:.c=.o)

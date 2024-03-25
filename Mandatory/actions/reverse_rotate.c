@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:43 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/19 21:44:53 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/24 21:25:54 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ void reverse_rotate(t_stack **stack, char *str)
     }
     last = current;
     ft_lstadd_front(stack, last);
-    prev->next = NULL;
     ft_putendl(str);
 }

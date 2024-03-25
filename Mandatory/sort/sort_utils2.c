@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 21:46:03 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/24 00:43:46 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/24 23:56:04 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,19 @@ void total_cost(t_stack **stack_b)
 
 int min_cost(t_stack **stack)
 {
-    
+    int minimum;
+    t_stack *head;
+
+    minimum = INT_MAX;
+    head = *stack;
+    while (head)
+    {
+        if (head->total_cost < minimum)
+        {
+            minimum = head->total_cost;
+            head->node_min_cost = head;
+        }
+        head = head->next;
+    }
+    return (minimum);
 }
