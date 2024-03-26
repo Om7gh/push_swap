@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/25 00:15:00 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/25 20:36:39 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_stack
 {
     int value;
     int cost;
+    int index;
     int total_cost;
     struct s_stack *min;
     struct s_stack *node_min_cost;
@@ -62,7 +63,8 @@ int         is_sorted(t_stack **stack);
 void        cost_check(t_stack **stack);
 void        push_in_stack_b(t_stack **stack_a, t_stack **stack_b);
 void        total_cost(t_stack **stack_b);
-int         min_cost(t_stack **stack);
+void        index_stack(t_stack **stack);
+t_stack     *min_cost(t_stack **stack);
 void        sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 /*------------Actions----------*/

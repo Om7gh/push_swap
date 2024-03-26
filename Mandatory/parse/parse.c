@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:19:34 by omghazi           #+#    #+#             */
-/*   Updated: 2024/03/25 00:14:54 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/03/25 03:42:27 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,5 @@ void find_min(t_stack **stack)
         head = head->next;
     }
     head = *stack;
-    while (head)
-    {
-        head->min = min_node;
-        head = head->next;
-    }
+    head->min = min_node;
 }
