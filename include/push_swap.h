@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/04 22:17:27 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/05 12:10:29 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,20 @@ typedef struct s_stack
 
 /*------------Utils----------*/
 void		error(void);
-long		is_overflow(long n);
+int			is_overflow(long n);
 void		ft_putendl(char *s);
 void		free_2d(char **new, int i);
 bool		is_duplicate(t_stack **stack);
 bool		is_valid(char *av);
 void		ft_swap(int *x, int *y);
+int			is_space(char c);
 
 /*------------Libft----------*/
 t_stack		*ft_lstnew(int value);
 void		ft_lstadd_back(t_stack **stack, t_stack *node);
 void		ft_lstclean(t_stack **stack);
 void		ft_lstadd_front(t_stack **stack, t_stack *node);
-char		**ft_split(char *s, char c);
+char		**ft_split(char *s);
 long		ft_atoi(char *s);
 int			ft_lstsize(t_stack **stack);
 

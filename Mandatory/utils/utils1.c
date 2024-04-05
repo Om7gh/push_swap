@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:21:13 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/04 22:23:53 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/05 12:10:20 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,9 @@ void	ft_swap(int *x, int *y)
 	tmp = *x;
 	*x = *y;
 	*y = tmp;
+}
+
+int	is_space(char c)
+{
+	return (c == 32 || c == '\t');
 }
