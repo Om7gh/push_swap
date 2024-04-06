@@ -6,13 +6,12 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:38:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 12:10:29 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/05 12:19:17 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
 #include <stdlib.h>

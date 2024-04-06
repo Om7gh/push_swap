@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 11:37:26 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/04 20:03:07 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/05 14:15:03 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void	sort_four(t_stack **stack_a, t_stack **stack_b)
 	min = min_node(stack_a);
 	if ((*stack_a)->value != min->value)
 	{
-		while (min->index)
+		while (min->position)
 		{
-			if (min->index <= ft_lstsize(stack_a))
+			if (min->position <= ft_lstsize(stack_a) / 2)
 			{
 				if (!ra(stack_a))
 					return ;
@@ -78,9 +78,9 @@ void	sort_five(t_stack **stack_a, t_stack **stack_b)
 	min = min_node(stack_a);
 	if ((*stack_a)->value != min->value)
 	{
-		while (min->index)
+		while (min->position)
 		{
-			if (min->index <= ft_lstsize(stack_a))
+			if (min->position <= ft_lstsize(stack_a) / 2)
 			{
 				if (!ra(stack_a))
 					return ;
