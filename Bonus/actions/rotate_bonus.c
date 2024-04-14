@@ -6,11 +6,11 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:47 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 14:37:57 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/14 11:11:54 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../../include/push_swap_bonus.h"
 
 static int	rotate(t_stack **stack)
 {
@@ -33,7 +33,6 @@ int	ra(t_stack **stack)
 {
 	if (!rotate(stack))
 		return (0);
-	ft_putendl("ra");
 	return (1);
 }
 
@@ -41,7 +40,6 @@ int	rb(t_stack **stack)
 {
 	if (!rotate(stack))
 		return (0);
-	ft_putendl("rb");
 	return (1);
 }
 
@@ -51,6 +49,5 @@ int	rr(t_stack **stack_a, t_stack **stack_b)
 		return (0);
 	if (!rotate(stack_b))
 		return (0);
-	ft_putendl("rr");
 	return (1);
 }

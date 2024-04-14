@@ -20,12 +20,22 @@ SRC=$(addprefix Mandatory/, libft/ft_atoi.c\
 							)
 SRC_BONUS=$(addprefix Bonus/,utils/utils1_bonus.c\
 							 utils/utils2_bonus.c\
+							 utils/utils3_bonus.c\
 							 utils/get_next_line.c\
 							 utils/get_next_line_utils.c\
 							 actions/push_bonus.c\
 							 actions/swap_bonus.c\
 							 actions/rotate_bonus.c\
 							 actions/reverse_rotate_bonus.c\
+							 parse_bonus/parse_bonus.c\
+							 libft_bonus/ft_atoi.c\
+							 libft_bonus/ft_lstnew.c\
+							 libft_bonus/ft_lstadd_back.c\
+							 libft_bonus/ft_lstadd_front.c\
+							 libft_bonus/ft_lstsize.c\
+							 libft_bonus/ft_lstclean.c\
+							 libft_bonus/ft_split.c\
+							 libft_bonus/ft_strncmp.c\
 							 checker.c\
 							)
 OBJ=$(SRC:.c=.o)
@@ -35,7 +45,7 @@ NAME_BONUS=checker
 HEADER=include/push_swap.h
 HEADER_BONUS=include/push_swap_bonus.h include/get_next_line.h
 CC=cc
-CFLAG=-Wall -Wextra -Werror
+CFLAG=-Wall -Wextra -Werror -g
 Mandatory/%.o:Mandatory/%.c $(HEADER)
 		$(CC) $(CFLAG) -c $< -o $@
 Bonus/%.o:Bonus/%.c $(HEADER_BONUS)

@@ -6,23 +6,27 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 23:47:54 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 23:49:42 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/14 15:15:01 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap_bonus.h"
 
-int	ft_strncmp(char *s1, char *s2, int n)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while ((*s1 || *s2) && i < n)
+	j = 0;
+	while (s1[i] && s2[j])
 	{
-		if (*s1 != *s2)
+		if (s1[i] != s2[j])
 			return (0);
-		s1++;
-		s2++;
+		i++;
+		j++;
 	}
-	return (1);
+	if (s1[i] == '\0' && s2[j] == '\0')
+		return (1);
+	return (0);
 }

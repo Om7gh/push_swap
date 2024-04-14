@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:21:13 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 12:10:20 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/13 14:26:26 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	free_2d(char **new, int i)
 	int	size;
 
 	size = 0;
-	while (size < i)
+	while (size <= i)
 	{
 		free(new[size]);
 		size++;

@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:16:51 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 23:46:11 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/13 20:01:39 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_lstclean(t_stack **stack)
 	while (current)
 	{
 		next = current->next;
+		free(current->action);
 		free(current);
 		current = next;
 	}

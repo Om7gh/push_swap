@@ -6,6 +6,8 @@
         "limits": "c",
         "ratio": "c",
         "push_swap.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "push_swap_bonus.h": "c",
+        "limits.h": "c"
     }
 }

@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 09:32:46 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 12:11:55 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/14 15:00:41 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ bool	is_sorted(t_stack *stack)
 	t_stack	*head;
 	t_stack	*tmp;
 
+	if (!stack)
+		(ft_lstclean(&stack), error());
 	head = stack;
 	tmp = stack->next;
 	while (tmp)

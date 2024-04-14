@@ -6,11 +6,29 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:39:52 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 13:41:46 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/14 15:03:37 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+static bool	is_empty(char **av)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j] == ' ' || av[i][j] == '\t')
+			j++;
+		if (av[i][j] == '\0')
+			return (true);
+		i++;
+	}
+	return (false);
+}
 
 void	_push(t_stack **stack_a, t_stack **stack_b)
 {
@@ -43,7 +61,9 @@ int	main(int ac, char **av)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ac == 1)
-		return (1);
+		return (0);
+	if (is_empty(av + 1))
+		error();
 	fill_stack(&stack_a, av + 1);
 	index_stack(&stack_a);
 	if (!is_sorted(stack_a))

@@ -6,11 +6,11 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 09:35:54 by omghazi           #+#    #+#             */
-/*   Updated: 2024/02/25 15:21:25 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/12 11:32:11 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../../include/get_next_line.h"
 
 static char	*read_line(int fd, char *buff)
 {

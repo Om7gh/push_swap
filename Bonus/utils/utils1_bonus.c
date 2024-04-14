@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils1.c                                           :+:      :+:    :+:   */
+/*   utils1_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:21:13 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 12:10:20 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/14 11:45:00 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../../include/push_swap_bonus.h"
 
 void	error(void)
 {
@@ -32,7 +32,7 @@ void	free_2d(char **new, int i)
 	int	size;
 
 	size = 0;
-	while (size < i)
+	while (size <= i)
 	{
 		free(new[size]);
 		size++;
@@ -52,5 +52,5 @@ void	ft_swap(int *x, int *y)
 
 int	is_space(char c)
 {
-	return (c == 32 || c == '\t');
+	return (c == ' ' || c == '\t');
 }

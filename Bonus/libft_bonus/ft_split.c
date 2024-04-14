@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:41:54 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/05 23:46:01 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/14 15:14:26 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ static unsigned int	count_word(char *s)
 	int		words;
 
 	i = 0;
-	last = is_space(s[i]);
+	last = ' ';
 	words = 0;
 	while (s[i])
 	{
-		if (last == is_space(s[i]) && s[i] != is_space(s[i]))
+		if (last == ' ' && (s[i] != ' ' && s[i] != '\t'))
 			words++;
 		last = s[i];
 		i++;
@@ -36,7 +36,7 @@ static unsigned int	word_len(char *s)
 	int	len;
 
 	len = 0;
-	while (s[len] && s[len] != is_space(s[len]))
+	while (s[len] && (s[len] != ' ' && s[len] != '\t'))
 		len++;
 	return (len);
 }
@@ -46,7 +46,7 @@ static char	*str_copy(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (*(s1 + i) && *(s1 + i) != is_space(s1[i]))
+	while (*(s1 + i) && (s1[i] != ' ' && s1[i] != '\t'))
 	{
 		*(s2 + i) = *(s1 + i);
 		i++;
@@ -59,7 +59,7 @@ void	fill_matrice(char *s, char **new, int *i, int *j)
 {
 	while (s[*i])
 	{
-		while (s[*i] && s[*i] == is_space(s[*i]))
+		while (s[*i] <= 32)
 			(*i)++;
 		if (s[*i])
 		{
@@ -69,7 +69,7 @@ void	fill_matrice(char *s, char **new, int *i, int *j)
 			new[*j] = str_copy(s + *i, new[*j]);
 			(*j)++;
 		}
-		while (s[*i] && s[*i] != is_space(s[*i]))
+		while (s[*i] && (s[*i] != ' ' && s[*i] != '\t'))
 			(*i)++;
 	}
 }
@@ -86,7 +86,5 @@ char	**ft_split(char *s)
 	if (!new)
 		error();
 	fill_matrice(s, new, &i, &j);
-	if (new[0] == NULL || *new[0] == '\0')
-		(free_2d(new, i), error());
 	return (new[j] = NULL, new);
 }

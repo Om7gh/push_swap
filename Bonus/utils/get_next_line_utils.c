@@ -6,11 +6,11 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 13:50:22 by omghazi           #+#    #+#             */
-/*   Updated: 2024/02/25 15:35:18 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/12 11:33:08 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../../include/get_next_line.h"
 
 size_t	my_strlen(char *s)
 {
