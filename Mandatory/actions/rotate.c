@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:47 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/04 22:20:43 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/15 14:32:29 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	rotate(t_stack **stack)
 	t_stack	*head;
 	t_stack	*last;
 
-	if (ft_lstsize(stack) < 2)
+	if (ft_lstsize(stack) < 2 || !stack || !*stack)
 		return (0);
 	head = *stack;
 	*stack = head->next;

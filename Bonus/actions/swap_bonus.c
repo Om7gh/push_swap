@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:50 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/14 11:12:00 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/15 14:26:24 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	swap(t_stack **stack)
 {
 	t_stack	*head;
 
-	if (!stack || !*stack)
+	if (!stack || !*stack || ft_lstsize(stack) < 2)
 		return (0);
 	head = *stack;
 	ft_swap(&(head->value), &(head->next->value));

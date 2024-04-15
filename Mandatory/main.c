@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 02:39:52 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/14 15:03:37 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/15 14:38:10 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static bool	is_empty(char **av)
 	return (false);
 }
 
-void	_push(t_stack **stack_a, t_stack **stack_b)
+static void	_push(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size;
 

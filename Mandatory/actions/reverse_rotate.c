@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 10:21:43 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/04 22:20:11 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/15 14:32:53 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	reverse_rotate(t_stack **stack)
 	t_stack		*prev;
 	int			size;
 
+	if (!stack || !*stack)
+		return (0);
 	size = ft_lstsize(stack);
 	if (size < 2)
 		return (0);

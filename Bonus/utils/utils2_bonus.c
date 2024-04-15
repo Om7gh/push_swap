@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 03:27:58 by omghazi           #+#    #+#             */
-/*   Updated: 2024/04/13 15:48:41 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/04/15 14:20:19 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ bool	is_valid(char *av)
 	i = 0;
 	while (av[i])
 	{
+		if ((av[i] == '-' || av[i] == '+') && !check_value(av[i + 1]))
+			return (false);
 		if (!check_value(av[i]))
 			return (false);
 		if (av[i + 1] == '-' || av[i + 1] == '+')
